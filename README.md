@@ -1,3 +1,5 @@
+This template is created following this tutorial: https://medium.com/swlh/aws-cdk-and-typescript-deploy-a-static-react-app-to-s3-df74193e9e3d
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -46,16 +48,19 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Deploy to S3
-CDK operations need to be run `/cdk`
+CDK operations need to be run `/cdk`.
+
 0. Configure AWS:
    - Either use `export AWS_REGION=eu-west-1 AWS_ACCESS_KEY_ID={AWS_ACCESS_KEY_ID} AWS_SECRET_ACCESS_KEY={AWS_SECRET_ACCESS_KEY}`
    - Or use `aws configure`
 1. CDK Bootstrap:
 ```export CDK_NEW_BOOTSTRAP=1 ```
+
 ```cdk bootstrap```
 
 2. CDK Synth + CDK Deploy when changed
 ```cdk synth ```
+
 ```cdk deploy```
 Then check Cloudfront in Console for an url that can be used to access the static page.
 
