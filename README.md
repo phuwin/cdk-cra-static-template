@@ -44,3 +44,21 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Deploy to S3
+CDK operations need to be run `/cdk`
+0. Configure AWS:
+   - Either use `export AWS_REGION=eu-west-1 AWS_ACCESS_KEY_ID={AWS_ACCESS_KEY_ID} AWS_SECRET_ACCESS_KEY={AWS_SECRET_ACCESS_KEY}`
+   - Or use `aws configure`
+1. CDK Bootstrap:
+```export CDK_NEW_BOOTSTRAP=1 ```
+```cdk bootstrap```
+
+2. CDK Synth + CDK Deploy when changed
+```cdk synth ```
+```cdk deploy```
+Then check Cloudfront in Console for an url that can be used to access the static page.
+
+1. Destroy to avoid cost:
+```cdk destroy```
+
